@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto text-center px-10;
+  }
+
+  .section-title {
+    @apply mb-8 text-4xl md:text-5xl font-bold text-darkGrayishBlue;
+  }
+
+  .button-container {
+    @apply flex flex-col md:flex-row justify-center gap-6 md:gap-4 text-white w-full text-xl;
+  }
+
+  .feature-title {
+    @apply mb-2 text-2xl font-bold text-darkGrayishBlue;
+  }
+
+  .section-content {
+    @apply max-w-3xl mx-auto text-center text-xl leading-9 text-grayishBlue;
+  }
+
+  .ficon:hover {
+    filter: invert(53%) brightness(101%) contrast(94%) saturate(434%) hue-rotate(121deg) sepia(68%);
+  }
+}
+
+body {
+  background-image: url('../images/bg-header-desktop.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 576px) {
+  body {
+    background-image: url('../images/bg-header-mobile.png');
+  }
+}
